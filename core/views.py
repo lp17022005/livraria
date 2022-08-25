@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import Categoria, Editora
-from core.serializers import CategoriaSerializer, EditoraSerializer,LivroSerializer,
+from core.models import Categoria, Editora, Livro
+from core.serializers import CategoriaSerializer, EditoraSerializer,LivroSerializer
 
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
@@ -14,8 +14,5 @@ class EditoraViewSet(ModelViewSet):
 
 class LivroViewSet(ModelViewSet):
     queryset = Livro.objects.all()
-
-    def get_serializer_class(self):
-        if self.action in ['list', 'retrieve']:
-            return LivroDetailSerializer
-        return LivroSerializer
+    serializer_class = LivroSerializer
+ 
