@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-rxue()+sh0^a5x7byms7+8pk3w2%#w9hczuo&e7lan%$qof@pj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -115,6 +115,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+#STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage" 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
